@@ -1,0 +1,427 @@
+<html>
+<head>
+<title>Nosh-Cart</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
+}
+.nDVxx {
+    -ms-flex-positive: 1;
+    /* flex-grow: 1; */
+}
+/* navbar section */
+.navbar {
+  box-shadow: 0 15px 40px -20px rgb(40 44 63 / 15%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  z-index: 1000;
+  padding: 0 20px;
+}
+.navbar .nav {
+  max-width: 1200px;
+  min-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .left {
+  display: flex;
+  align-items: center;
+}
+.navbar .left .logo {
+  display: block;
+  height: 49px;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  margin-right: 16px;
+}
+.navbar .left .logo:hover {
+  transform: scale(1.1);
+}
+.navbar .location-div,
+.other {
+  position: relative;
+}
+.navbar .location-div {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  max-width: 300px;
+  height: 30px;
+  cursor: pointer;
+  margin-bottom: -1px;
+  padding-right: 10px;
+  font-size: 14px;
+}
+.navbar .right {
+  position: relative;
+}
+.location-div .other {
+  font-weight: 700;
+  color: #3d4152;
+  float: left;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #3d4152;
+}
+.location-div .other:hover {
+  color: #fc8019;
+  border-bottom: 2px solid #fc8019;
+}
+.location-div .location {
+  display: block;
+  font-weight: 300;
+  padding-left: 5px;
+  margin-left: 5px;
+  color: #686b78;
+}
+.location-div .arrow-down {
+  position: absolute;
+  right: -6%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #fc8019;
+  font-weight: 700;
+}
+.right .items {
+  display: flex;
+  align-items: center;
+}
+.right .items li {
+  margin-right: 36px;
+  color: #3d4152;
+  font-size: 16px;
+  font-weight: 500;
+  list-style-type: none;
+}
+.right .items .nav-item {
+  display: flex;
+  align-items: center;
+  padding-left: 28px;
+  position: relative;
+  height: 80px;
+  cursor: pointer;
+}
+.right .items .nav-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #3d4152;
+  font-size: 16px;
+}
+.nav-item a:hover {
+  color: #fc8019;
+}
+
+.nav-item a span {
+  padding-left: 11px;
+}
+.right .items li:last-child a svg {
+  color: #60b246;
+}
+.content-section{
+  max-width: 200px;
+  margin: auto;
+  padding: 50px;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.EFC{
+height:80vh;
+width:100%;
+background-image:url('file:///C:/Users/isdx/Pictures/Capture0.PNG');
+background-size:cover;
+background-position:center;
+position:relative;
+}
+.footer {
+  padding: 0 20px;
+  z-index: 10;
+  background-color: #000;
+  min-height: 298px;
+  width: 100%;
+  color: #fff;
+  overflow: scroll;
+}
+.footer-content {
+  width: 100%;
+  display: flex;
+  background-color: #000000;
+  justify-content: space-around;
+  max-width: 1200px;
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 76px 0;
+  height: 100%;
+}
+
+.points {
+  color: #808080;
+  font-size: 15px;
+  font-weight: 600;
+  /*    border: 1px solid white;*/
+  width: 300px;
+  margin: 26px 0px 10px 15px;
+  /*    padding: 15px 0px 0px 0px;*/
+}
+
+.footer-li {
+  padding: 20px 10px 2px 0px;
+}
+
+.footer-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-li a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.footer-li a:hover {
+  font-weight: 600;
+}
+
+.points img {
+  border: 2px solid #808080;
+  padding: 10px;
+  margin: 30px 0px 10px 57px;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+
+.points img:hover {
+  transform: scale(1.06);
+  cursor: pointer;
+}
+</style>
+</head>
+<div class="EFC">
+<header class="navbar">
+<div class="global-nav">
+<div class="nav">
+<div class="left">
+<a href="file:///C:/Users/isdx/Desktop/New%20folder%20(2)/food.html" class="logo">
+<img src="file:///C:/Users/isdx/Pictures/Capture9.PNG" data-noaft="1" style="width: 90px; height: 90px; margin: 0px;">
+</a>
+<div class="location-div">
+<span class="other">other</span>
+<span class="location">Vizag,Andra Pradesh,India</span>
+<span class="arrow-down"><i class="fa-solid fa-angle-down"></i></span>
+</div>
+</div>
+<div class="right">
+<ul class="items">
+<div class="nav-item">
+<li>
+<a href=""><svg class="_1GTCc" viewBox="6 -1 12 25" height="19" width="19" fill="#686b78"><path d="M21.966903,13.2244898 C22.0156989,12.8231523 22.0408163,12.4145094 22.0408163,12 C22.0408163,11.8357822 22.036874,11.6724851 22.029079,11.5101984 L17.8574333,11.5102041 C17.8707569,11.6717062 17.877551,11.8350597 17.877551,12 C17.877551,12.4199029 17.8335181,12.8295214 17.749818,13.2244898 L21.966903,13.2244898 Z M21.5255943,15.1836735 L16.9414724,15.1836735 C15.8950289,16.8045422 14.0728218,17.877551 12,17.877551 C9.92717823,17.877551 8.1049711,16.8045422 7.05852762,15.1836735 L2.47440565,15.1836735 C3.80564362,19.168549 7.56739481,22.0408163 12,22.0408163 C16.4326052,22.0408163 20.1943564,19.168549 21.5255943,15.1836735 Z M21.7400381,9.55102041 C20.6468384,5.18931674 16.7006382,1.95918367 12,1.95918367 C7.2993618,1.95918367 3.3531616,5.18931674 2.25996187,9.55102041 L6.6553883,9.55102041 C7.58404845,7.5276442 9.62792376,6.12244898 12,6.12244898 C14.3720762,6.12244898 16.4159515,7.5276442 17.3446117,9.55102041 L21.7400381,9.55102041 Z M2.03309705,13.2244898 L6.25018203,13.2244898 C6.16648186,12.8295214 6.12244898,12.4199029 6.12244898,12 C6.12244898,11.8350597 6.1292431,11.6717062 6.14256675,11.5102041 L1.97092075,11.5102041 C1.96312595,11.6724851 1.95918367,11.8357822 1.95918367,12 C1.95918367,12.4145094 1.98430112,12.8231523 2.03309705,13.2244898 Z M12,24 C5.372583,24 0,18.627417 0,12 C0,5.372583 5.372583,0 12,0 C18.627417,0 24,5.372583 24,12 C24,18.627417 18.627417,24 12,24 Z M12,15.9183673 C14.1640545,15.9183673 15.9183673,14.1640545 15.9183673,12 C15.9183673,9.83594547 14.1640545,8.08163265 12,8.08163265 C9.83594547,8.08163265 8.08163265,9.83594547 8.08163265,12 C8.08163265,14.1640545 9.83594547,15.9183673 12,15.9183673 Z"></path></svg>
+<span class="help">help</span>
+</a></li>
+<li>
+<a href="file:///C:/Users/isdx/Desktop/New%20folder%20(2)/login.html">
+<svg class="_1GTCc" viewBox="6 0 12 24" height="19" width="18" fill="#686b78"><path d="M11.9923172,11.2463768 C8.81761115,11.2463768 6.24400341,8.72878961 6.24400341,5.62318841 C6.24400341,2.5175872 8.81761115,0 11.9923172,0 C15.1670232,0 17.740631,2.5175872 17.740631,5.62318841 C17.740631,8.72878961 15.1670232,11.2463768 11.9923172,11.2463768 Z M11.9923172,9.27536232 C14.0542397,9.27536232 15.7257581,7.64022836 15.7257581,5.62318841 C15.7257581,3.60614845 14.0542397,1.97101449 11.9923172,1.97101449 C9.93039471,1.97101449 8.25887628,3.60614845 8.25887628,5.62318841 C8.25887628,7.64022836 9.93039471,9.27536232 11.9923172,9.27536232 Z M24,24 L0,24 L1.21786143,19.7101449 L2.38352552,15.6939891 C2.85911209,14.0398226 4.59284263,12.7536232 6.3530098,12.7536232 L17.6316246,12.7536232 C19.3874139,12.7536232 21.1256928,14.0404157 21.6011089,15.6939891 L22.9903494,20.5259906 C23.0204168,20.63057 23.0450458,20.7352884 23.0641579,20.8398867 L24,24 Z M21.1127477,21.3339312 L21.0851024,21.2122487 C21.0772161,21.1630075 21.0658093,21.1120821 21.0507301,21.0596341 L19.6614896,16.2276325 C19.4305871,15.4245164 18.4851476,14.7246377 17.6316246,14.7246377 L6.3530098,14.7246377 C5.4959645,14.7246377 4.55444948,15.4231177 4.32314478,16.2276325 L2.75521062,21.6811594 L2.65068631,22.0289855 L21.3185825,22.0289855 L21.1127477,21.3339312 Z"></path></svg>
+<span class="signin">signin</span></a></li>
+</div>
+</div>
+</div>
+</div>
+</header>
+</br></br></br></br></br></br>
+<main class="content-section">
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRgLFSTYuiXwSd3sxiQ1EXb_ORwIjlsYIAR8h3TPyCvSBjp_hER0IaLTvNDxPUmk8VVmg&usqp=CAU"></br>
+        <h3>Your Cart is empty</h3>
+          <a href="file:///C:/Users/isdx/Desktop/New%20folder%20(2)/food.html"><input type="button" class="button" value="SEE RESTAURANTS NEAR YOU"></a>
+</main>
+</div>
+<footer class="footer">
+        <div class="footer-content">
+          <div class="points">
+            COMPANY
+            <ul class="footer-ul">
+              <li class="footer-li"><a href="#">About us</a></li>
+              <li class="footer-li"><a href="#">Team</a></li>
+              <li class="footer-li"><a href="#">Careers</a></li>
+              <li class="footer-li"><a href="#">Nosh Blog</a></li>
+              <li class="footer-li"><a href="#">Bug Bounty</a></li>
+              <li class="footer-li"><a href="#">Nosh Super</a></li>
+              <li class="footer-li"><a href="#">Nosh Corporate</a></li>
+              <li class="footer-li"><a href="#">Nosh Instamart</a></li>
+            </ul>
+          </div>
+          <div class="points">
+            CONTACT
+            <ul class="footer-ul">
+              <li class="footer-li"><a href="#">Help & Support</a></li>
+              <li class="footer-li"><a href="#">Partner with us</a></li>
+              <li class="footer-li"><a href="#">Ride with us</a></li>
+            </ul>
+          </div>
+          <div class="points">
+            LEGAL
+            <ul class="footer-ul">
+              <li class="footer-li"><a href="#">Terms & Conditions</a></li>
+              <li class="footer-li"><a href="#">Refund & Cancellation</a></li>
+              <li class="footer-li"><a href="#">Privacy Policy</a></li>
+              <li class="footer-li"><a href="#">Cookie Policy</a></li>
+              <li class="footer-li"><a href="#">Offer Terms</a></li>
+              <li class="footer-li"><a href="#">Phishing & Fraud</a></li>
+            </ul>
+          </div>
+          <div class="points">
+            <img
+              src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/play_ip0jfp"
+              height="54"
+            />
+            <img
+              src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/iOS_ajgrty"
+              height="54"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- <div class="box">
+      <div class="left">
+        <div class="top">
+          <div class="logo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Swiggy_logo.svg/2560px-Swiggy_logo.svg.png"
+            />
+          </div>
+          <div class="buttons">
+            <a href="#" id="btn1">Login</a>
+            <a href="#" id="btn2">Sign up</a>
+          </div>
+        </div>
+        <div class="text">
+          <h1 id="text-head">Hungry?</h1>
+          <p>Order food from favourite restaurants near you.</p>
+        </div>
+        <div class="location-box">
+          <div class="location-search">
+            <input type="text" placeholder="Enter your delivery location" />
+          </div>
+          <div class="location-button">
+            <a href="#">FIND FOOD</a>
+          </div>
+        </div>
+        <div class="bottom">
+          <h4>POPULAR CITIES IN INDIA</h4>
+          <ul>
+            <li><a href="#">Ahmedabad</a></li>
+            <li><a href="#">Bangalore</a></li>
+            <li><a href="#">Chennai</a></li>
+            <li><a href="#">Delhi</a></li>
+            <li><a href="#">Gurgaon</a></li>
+            <li><a href="#">Hyderabad</a></li>
+            <li><a href="#">Kolkata</a></li>
+            <li><a href="#">Mumbai</a></li>
+            <li><a href="#">Pune</a></li>
+            <li><a href="#">& more.</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+    <div class="function">
+      <div class="fun-box">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_210,h_398/4x_-_No_min_order_x0bxuf"
+          width="105"
+          height="199"
+        />
+        <h4>No Minimum Order</h4>
+        <p>
+          Order in for yourself or for the group, with no restrictions on order
+          value
+        </p>
+      </div>
+      <div class="fun-box">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_224,h_412/4x_Live_order_zzotwy"
+          width="112"
+          height="206"
+        />
+        <h4>Live Order Tracking</h4>
+        <p>
+          Know where your order is at all times, from the restaurant to your
+          doorstep
+        </p>
+      </div>
+      <div class="fun-box">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_248,h_376/4x_-_Super_fast_delivery_awv7sn"
+          width="124"
+          height="188"
+        />
+        <h4>Lightning-Fast Delivery</h4>
+        <p>
+          Experience Swiggy's superfast delivery for food delivered fresh & on
+          time
+        </p>
+      </div>
+    </div>
+    <div class="app">
+      <div class="app-text">
+        <h1>Restaurants in your pocket</h1>
+        <p>
+          Order from your favorite restaurants & track on the go, with the
+          all-new Swiggy app.
+        </p>
+        <div class="app-button">
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/play_ip0jfp"
+            height="54"
+          />
+          <img
+            src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/iOS_ajgrty"
+            height="54"
+          />
+        </div>
+      </div>
+      <div class="app-image">
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_768,h_978/pixel_wbdy4n"
+          height="489"
+          width="384"
+        />
+        <img
+          src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_768,h_978/iPhone_wgconp_j0d1fn"
+          height="489"
+          width="384"
+        />
+      </div>
+    </div> -->
+</html>
